@@ -1,9 +1,9 @@
 import express from "express";
-import { conLogin, conSignup } from "../controllers/auth.js";
+import { consumerSignup } from "../controllers/consumer";
 import auth from "../middleware/auth.js";
 
 const router = express.Router();
-router.post("/signup", conSignup);
-router.post("/login", conLogin);
+router.post("/signup", consumerSignup);
+// router.post("/login", consumerSignin);
 
-export default router;
+module.exports = router;
